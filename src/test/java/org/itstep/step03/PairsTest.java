@@ -1,5 +1,6 @@
 package org.itstep.step03;
 
+import org.itstep.step02.Pair;
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
@@ -12,69 +13,69 @@ class PairsTest {
 
     @Test
     public void testPairsAddThenIterateWithinCapacity() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
-//        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
-//        for (int i = 0; i < 10; i++) {
-//            pairs.addPair("A" + i, i);
-//        }
-//
-//        int i = 0;
-//        for (Pair<String, Integer> pair : pairs) {
-//            assertEquals(pair.getFirst(), "A" + i);
-//            assertEquals(pair.getSecond(), Integer.valueOf(i));
-//            i++;
-//        }
+//        fail("Раскомментируйте тест после реализации класса Pairs");
+        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
+        for (int i = 0; i < 10; i++) {
+            pairs.addPair("A" + i, i);
+        }
+
+        int i = 0;
+        for (Pair<String, Integer> pair : pairs) {
+            assertEquals(pair.getFirst(), "A" + i);
+            assertEquals(pair.getSecond(), Integer.valueOf(i));
+            i++;
+        }
     }
 
     @Test
     public void testPairsAddBeyondCapacity() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
-//        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
-//        for (int i = 0; i < 10; i++) {
-//            assertTrue(pairs.addPair("A" + i, i));
-//        }
-//
-//        assertFalse(pairs.addPair("B", 20));
-//
-//        int i = 0;
-//        for (Pair<String, Integer> pair : pairs) {
-//            assertEquals(pair.getFirst(), "A" + i);
-//            assertEquals(pair.getSecond(), Integer.valueOf(i));
-//            i++;
-//        }
-//        assertEquals(10, i);
+//        fail("Раскомментируйте тест после реализации класса Pairs");
+        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
+        for (int i = 0; i < 10; i++) {
+            assertTrue(pairs.addPair("A" + i, i));
+        }
+
+        assertFalse(pairs.addPair("B", 20));
+
+        int i = 0;
+        for (Pair<String, Integer> pair : pairs) {
+            assertEquals(pair.getFirst(), "A" + i);
+            assertEquals(pair.getSecond(), Integer.valueOf(i));
+            i++;
+        }
+        assertEquals(10, i);
     }
 
     @Test
     public void testPairsRemove() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
-//        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
-//        for (int i = 0; i < 10; i++) {
-//            assertTrue(pairs.addPair("A" + i, i));
-//        }
-//
-//        Iterator<Pair<String, Integer>> iterator = pairs.iterator();
-//        while (iterator.hasNext()) {
-//            Pair<String, Integer> pair = iterator.next();
-//            /* Remove any with an even second value */
-//            if ((pair.getSecond() % 2) == 0) {
-//                iterator.remove();
-//            }
-//        }
-//
-//        int i = 1;
-//        for (Pair<String, Integer> pair : pairs) {
-//            assertEquals(pair.getFirst(), "A" + i);
-//            assertEquals(pair.getSecond(), Integer.valueOf(i));
-//            i += 2;
-//        }
-//        assertEquals(11, i);
+//        fail("Раскомментируйте тест после реализации класса Pairs");
+        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
+        for (int i = 0; i < 10; i++) {
+            assertTrue(pairs.addPair("A" + i, i));
+        }
+
+        Iterator<Pair<String, Integer>> iterator = pairs.iterator();
+        while (iterator.hasNext()) {
+            Pair<String, Integer> pair = iterator.next();
+            /* Remove any with an even second value */
+            if ((pair.getSecond() % 2) == 0) {
+                iterator.remove();
+            }
+        }
+
+        int i = 1;
+        for (Pair<String, Integer> pair : pairs) {
+            assertEquals(pair.getFirst(), "A" + i);
+            assertEquals(pair.getSecond(), Integer.valueOf(i));
+            i += 2;
+        }
+        assertEquals(11, i);
     }
 
 
     @Test
     public void testPairsDoubleRemoveThrowsException() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
+////        fail("Раскомментируйте тест после реализации класса Pairs");
 //        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
 //        for (int i = 0; i < 15; i++) {
 //            pairs.addPair("A" + i, i);
@@ -90,7 +91,7 @@ class PairsTest {
 
     @Test
     public void testPairsExceptionIfNextCalledWithNoMoreElements() {
-        fail("Раскомментируйте тест после реализации класса Pairs");
+//        fail("Раскомментируйте тест после реализации класса Pairs");
 //        Pairs<String, Integer> pairs = new Pairs<String, Integer>();
 //
 //        pairs.addPair("A", 1);

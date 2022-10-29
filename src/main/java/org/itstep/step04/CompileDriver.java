@@ -1,5 +1,7 @@
 package org.itstep.step04;
 
+import org.itstep.step02.Pair;
+
 /**
  * Обобщения. Вопросы о компиляции
  *
@@ -16,28 +18,28 @@ public class CompileDriver {
 //        Pair<Object, Object> p3;
 //        Pair<?, ?> p4;
 //        Pair<?, ? extends Number> p5;
-
-//        p1 = new Pair<String, Integer>("A", 7);
-//        int a = p1.getSecond();
 //
-//        p1 = new Pair<Integer, Double>(23, 12.0);
+//        p1 = new Pair<String, Integer>("A", 7); //да
+//        int a = p1.getSecond(); //да
 //
-//        p2 = new Pair<String, Integer>("B", 8);
+//        p1 = new Pair<Integer, Double>(23, 12.0); //нет
 //
-//        p3 = new Pair<String, Integer>("C", 9);
+//        p2 = new Pair<String, Integer>("B", 8);   //нет
 //
-//        p4 = new Pair<String, String>("House", "Car");
-//        p4 = new Pair<String, Integer>("D", 10);
+//        p3 = new Pair<String, Integer>("C", 9);   //нет
 //
-//        Integer b = p4.getSecond();
-//        Integer c = (Integer) p4.getSecond();
+//        p4 = new Pair<String, String>("House", "Car"); //да
+//        p4 = new Pair<String, Integer>("D", 10);  //да
 //
-//        p5 = new Pair<String, String>("E", "G");
-//        p5 = new Pair<String, Double>("E", 11.0);
-//        p5 = new Pair<String, Integer>("E", 11);
+//        Integer b = p4.getSecond();   //нет
+//        Integer c = (Integer) p4.getSecond(); //да
 //
-//        Integer d = p5.getSecond();
-//        Integer e = (Integer) p5.getSecond();
+//        p5 = new Pair<String, String>("E", "G");  //нет
+//        p5 = new Pair<String, Double>("E", 11.0); //да
+//        p5 = new Pair<String, Integer>("E", 11);  //да
+//
+//        Integer d = p5.getSecond();   //нет
+//        Integer e = (Integer) p5.getSecond(); //да
     }
 
 }
