@@ -12,10 +12,10 @@ import java.util.Iterator;
  * @version V1, 8/2017
  */
 public class Pairs<K, V> implements Iterable<Pair<K, V>> {
-    private K first;
-    private V second;
+    private K first; // це зайве
+    private V second; // це зайве
     private int index = 0;
-    private int lengthMas=10; // длина массива
+    private static final int lengthMas=10; // длина массива
 
     /* TODO: Объявить массив фиксированного размера (максимум 10 элементов) объектов Pair */
 
@@ -31,19 +31,19 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
         this.second = second;
     }
 
-    public Pairs() {
+    public Pairs() { // це зайве
 
     }
 
-    public K getFirst() {
+    public K getFirst() { // це зайве
         return first;
     }
 
-    public V getSecond() {
+    public V getSecond() { // це зайве
         return second;
     }
 
-    public int getIndex() {
+    public int getIndex() { // це зайве
         return index;
     }
 
@@ -64,7 +64,7 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
                 return false;
             }
         } else {
-            pairs=Arrays.copyOf(pairs,pairs.length+1);
+            pairs=Arrays.copyOf(pairs,pairs.length+1); // це не потрібно
             pairs[pairs.length-1] = new Pair<>(first, second);
             index++;
             return true;
